@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-cities-app/static/css/main.f29ae65a.chunk.css",
+    "main.js": "/react-cities-app/static/js/main.064cc887.chunk.js",
+    "main.js.map": "/react-cities-app/static/js/main.064cc887.chunk.js.map",
+    "runtime-main.js": "/react-cities-app/static/js/runtime-main.1b4f321d.js",
+    "runtime-main.js.map": "/react-cities-app/static/js/runtime-main.1b4f321d.js.map",
+    "static/js/2.f1ac4c04.chunk.js": "/react-cities-app/static/js/2.f1ac4c04.chunk.js",
+    "static/js/2.f1ac4c04.chunk.js.map": "/react-cities-app/static/js/2.f1ac4c04.chunk.js.map",
+    "index.html": "/react-cities-app/index.html",
+    "static/css/main.f29ae65a.chunk.css.map": "/react-cities-app/static/css/main.f29ae65a.chunk.css.map",
+    "static/js/2.f1ac4c04.chunk.js.LICENSE.txt": "/react-cities-app/static/js/2.f1ac4c04.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b4f321d.js",
+    "static/js/2.f1ac4c04.chunk.js",
+    "static/css/main.f29ae65a.chunk.css",
+    "static/js/main.064cc887.chunk.js"
+  ]
+}
