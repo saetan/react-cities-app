@@ -7,8 +7,10 @@ import Thumb from './Thumb';
 
 export default function App() {
   // USE useState TO CREATE  [bigImage, setBigImage] 
-  const [bigImage, setBigImage] = useState('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
+  const [bigImage, setBigImage] = useState('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60'
   );
+
+  const [isSelected, setIsSelected] = useState([false, false, false, false, false, false, false, false])
   // AND SET IT TO THE IMAGE URL OF THE FIRST ELEMENT IN THE ARRAY
 
   // CREATE A HANDLE CLICK FUNCTION THAT ACCEPTS AN IMAGE URL
@@ -18,7 +20,7 @@ export default function App() {
   // ASSIGN ALL OF THE PROPERTIES THAT IT NEEDS: src, alt, className, key INCLUDING AN onClick EVENT THAT CALLS THE HANDLE EVENT FUNCTION AND PASSES IT THE IMG URL
   const renderImages = imagesArr.map((record, index) => {
     const { city, img } = record
-    return <Thumb city={city} url={img} key={index} />
+    return <Thumb id={index} city={city} url={img} key={index} isSelected={isSelected[index]} />
   })
 
   return (
@@ -28,6 +30,16 @@ export default function App() {
         <div id="thumbnails" onClick={(event) => {
           if (event.target.className === 'thumb') {
             setBigImage(event.target.src);
+            let selectedIndex = event.target.id;
+            for (let index in isSelected) {
+              if (index === selectedIndex) {
+                isSelected[index] = true;
+              } else {
+                isSelected[index] = false;
+              }
+            }
+            console.log(isSelected);
+            setIsSelected([...isSelected]);
           }
         }}>
           {/* RENDER THE IMAGES ARRAY  */}

@@ -1,5 +1,6 @@
 {
   "name": "react-cities-app",
+  "homepage": "https://saetan.github.io/react-cities-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
